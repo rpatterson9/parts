@@ -17,7 +17,7 @@ import { query, getDocs } from 'firebase/firestore';
 
 
 
-export default function PartsInventory() {
+ function Home() {
     const [partsData, setPartsData] = useState({});
     const [newPart, setNewPart] = useState('');
     const [newLocation, setNewLocation] = useState('');
@@ -194,3 +194,5 @@ export default function PartsInventory() {
         </Container>
     );
 }
+
+export default   Home;
