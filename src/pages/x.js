@@ -9,7 +9,7 @@ import {
     FormControl, FormLabel, VStack, HStack, Grid, GridItem, Box, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, useDisclosure
 } from '@chakra-ui/react';
 import styled from '@emotion/styled';
-import { firestore } from './firebase';
+import { firestore } from '../../firebase';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { collection, addDoc } from 'firebase/firestore';
 import { query, getDocs } from 'firebase/firestore';
