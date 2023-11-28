@@ -1,43 +1,65 @@
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
+  --max-width: 1400px;
+ 
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+ 
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
+  --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times,
+    'Times New Roman', serif;
 
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
+  --font-monospace: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
+  --font-sans-serif: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+}
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 10 columns */
+  grid-template-rows: repeat(10, 1fr); /* 10 rows */
+  gap: 10px; /* Space between grid items */
+  padding: 20px; /* Padding around the grid */
+  max-width: var(--max-width); /* Using variable for max-width */
+  margin: 0 auto; /* Centering the grid */
+  background-color: #f0f0f0; /* Light background for the grid area */
+}
+
+/* Grid Item */
+.grid-item {
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  border: 2px solid #ddd; /* Border for each grid item */
+  border-radius: var(--border-radius); /* Rounded corners */
+  background-color: #ffffff; /* White background for each item */
+  color: #333; /* Text color */
+  font-family: var(--font-mono); /* Monospace font */
+}
+
+/* Optional: Hover effect for grid items */
+.grid-item:hover {
+  background-color: #eaeaea;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(5, 1fr); /* Adjust columns for smaller screens */
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -74,26 +96,17 @@
 }
 
 * {
-  box-sizing: border-box;
+ 
   padding: 0;
   margin: 0;
 }
 
 html,
+ 
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  color: #fff;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
 a {
   color: inherit;
