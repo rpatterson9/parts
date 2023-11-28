@@ -1,6 +1,6 @@
  
 
-## parts
+## parts locator 8000
 
 
 a web app with a simple api to manage parts and their stock levels
