@@ -135,7 +135,7 @@ import { query, getDocs } from 'firebase/firestore';
                         <Input
                             id='search-part'
                             w="200px"
-                            variant={searchTerm ? "solid" : "outline"}
+                            variant={ "outline"}
 
                             placeholder="Enter part name"
                             value={searchTerm}
